@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Analysis Result</h1>
+    <p><strong>Original Text:</strong> {{ original_text }}</p>
+    <p><strong>Translated Text:</strong> {{ translated_text }}</p>
+    <p><strong>Sentiment:</strong> {{ sentiment }}</p>
+    <p><strong>Summary:</strong> {{ summary }}</p>
+    <audio controls>
+        <source src="{{ url_for('static', filename='audio/output.mp3') }}" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio><br><br>
+    <a href="/">Analyze Another Text</a>
+</body>
+</html>

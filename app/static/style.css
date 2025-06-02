@@ -1,0 +1,127 @@
+/* Importing cyberpunk-inspired fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Global Styles */
+body {
+  background-color: #0d0d0d;
+  background-image: radial-gradient(circle at center, #1a1a1a 0%, #0d0d0d 100%);
+  color: #00ffcc;
+  font-family: 'Orbitron', 'Courier New', Courier, monospace;
+  text-align: center;
+  padding: 50px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  perspective: 1000px;
+}
+
+/* Glitch Effect for h1 */
+@keyframes glitch {
+  0% { text-shadow: 2px 0 red; }
+  20% { text-shadow: -2px 0 blue; }
+  40% { text-shadow: 2px 0 green; }
+  60% { text-shadow: -2px 0 yellow; }
+  80% { text-shadow: 2px 0 purple; }
+  100% { text-shadow: -2px 0 cyan; }
+}
+
+h1 {
+  font-size: 48px;
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+  margin-bottom: 40px;
+  transform: rotateX(10deg);
+  animation: glitch 1s infinite;
+}
+
+/* Form Styling */
+form {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #00ffcc;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 30px;
+  box-shadow: 0 0 20px #00ffcc;
+  transform: rotateY(5deg);
+  transition: transform 0.5s;
+}
+
+form:hover {
+  transform: rotateY(0deg);
+}
+
+/* Textarea Styling */
+textarea {
+  width: 100%;
+  max-width: 500px;
+  height: 200px;
+  background-color: #1a1a1a;
+  color: #00ffcc;
+  border: 2px solid #00ffcc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  resize: none;
+  box-shadow: inset 0 0 10px #00ffcc;
+}
+
+/* Submit Button Styling */
+input[type="submit"] {
+  background-color: #ff00ff;
+  color: #0d0d0d;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 0 10px #ff00ff;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  transform: scale(1);
+}
+
+input[type="submit"]:hover {
+  background-color: #00ffcc;
+  color: #0d0d0d;
+  box-shadow: 0 0 20px #00ffcc;
+  transform: scale(1.05);
+}
+
+/* Select Dropdown Styling */
+select {
+  background-color: #1a1a1a;
+  color: #00ffcc;
+  border: 2px solid #00ffcc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  font-family: 'Orbitron', 'Courier New', Courier, monospace;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 0 10px #00ffcc, 0 0 20px #ff00ff;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+select:hover {
+  box-shadow: 0 0 20px #00ffcc, 0 0 30px #ff00ff;
+  transform: scale(1.05);
+}
+
+/* Custom Arrow for Select Dropdown */
+select::-ms-expand {
+  display: none;
+}
+
+select::after {
+  content: ' ▼';
+  font-size: 20px;
+  color: #ff00ff;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
